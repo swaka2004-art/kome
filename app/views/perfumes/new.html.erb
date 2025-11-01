@@ -1,0 +1,42 @@
+<%= form_for(@perfume, class: 'form-horizontal', role: 'form') do |f| %>
+    <div class="perfume-container">
+        <div class="col-12">
+            <p>Q1. いつお米を食べる？</p>
+        </div>
+        <div class="col-6">
+            <%= f.radio_button :question1, "1", id: "custom_id1" %>
+            <label for="custom_id1">朝</label>
+            <%= f.radio_button :question1, "2", id: "custom_id2" %>
+            <label for="custom_id2">昼</label>
+            <%= f.radio_button :question1, "3", id: "custom_id3" %>
+            <label for="custom_id3">夜</label>
+        </div>
+        <div class="col-12">
+            <p>Q2. 好きなお米の硬さは？</p>
+        </div> 
+        <div class="col-6">
+            <%= f.radio_button :question2, "1", id: "custom_id4" %>
+            <label for="custom_id4">硬め</label>
+            <%= f.radio_button :question2, "2", id: "custom_id5" %>
+            <label for="custom_id5">普通</label>
+            <%= f.radio_button :question2, "3", id: "custom_id6" %>
+            <label for="custom_id6">やわらかい</label>
+        </div>   
+        <div class="col-12">
+            <p>Q3. お米の粘りは？</p>
+        </div>
+        <div class="col-6">
+            <%= f.radio_button :question3, "1", id: "custom_id7" %>
+            <label for="custom_id7">もっちり</label>
+            <%= f.radio_button :question3, "2", id: "custom_id8" %>
+            <label for="custom_id8">普通</label>
+            <%= f.radio_button :question3, "3", id: "custom_id9" %>
+            <label for="custom_id9">あっさり</label>
+        </div>
+    
+        
+    </div>
+    <div class="sindanbotan">
+        <%= f.submit " 結果 " %>
+    </div>
+<% end %>

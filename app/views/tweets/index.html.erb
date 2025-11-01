@@ -1,0 +1,15 @@
+<h1>お米アレンジ</h1>
+<h3>一覧ページ</h3>
+<%= link_to "新規投稿へ", tweets_new_path %>
+<div class="tweets-container">
+  <% @tweets.each do |t| %>
+    <div class="tweet">
+    <% if t.image.attached? %>
+            <%= image_tag t.image, size: '250x200'%>
+    <% end %>
+      <%= t.cooking %>
+      <%= t.recipe %>
+      <%= t.created_at %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,21 @@
+<h1>お米アレンジ</h1>
+<h3>新規投稿</h3>
+<%= form_for @tweet do |f| %>
+  <div class="field">
+    <%= f.label :cooking %>
+    <%= f.text_field :cooking, :size => 30 %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :recipe %>
+    <%= f.text_field :recipe, :size => "100x5" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+  <%= f.submit "投稿する" %>
+<% end %>
+<%= link_to "投稿一覧に戻る", tweets_path %>
