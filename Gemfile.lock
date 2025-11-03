@@ -364,7 +364,7 @@ DEPENDENCIES
   jbuilder
   pg
   puma (>= 5.0)
-  rails (~> 7.1.5, >= 7.1.5.1)
+  rails (~> 7.1.6)
   rubocop-rails-omakase
   sassc-rails
   selenium-webdriver
