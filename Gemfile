@@ -63,3 +63,7 @@ gem "sassc-rails"
 gem 'cloudinary'
 gem 'activestorage-cloudinary-service'
 
+group :production do
+  gem 'pg'
+end
+
