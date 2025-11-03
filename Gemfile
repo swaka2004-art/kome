@@ -35,6 +35,7 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
+  gem 'pg'
   gem 'sqlite3' # 追加
   gem 'dotenv-rails' # 追加
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -62,7 +63,3 @@ gem "sassc-rails"
 gem 'cloudinary'
 gem 'activestorage-cloudinary-service'
 
-# PostgreSQL → 本番用
-group :production do
-  gem 'pg'
-end

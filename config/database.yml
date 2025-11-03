@@ -31,7 +31,5 @@ test:
 # ensure the database is located in a persisted volume.
 production:
   <<: *default
-  adapter: postgresql # 追加
-  encoding: unicode # 追加
-  url: <%= ENV["DATABASE_URL"] %> # 追加
-  # database: path/to/persistent/storage/production.sqlite3
+  adapter: sqlite3
+  database: db/production.sqlite3
