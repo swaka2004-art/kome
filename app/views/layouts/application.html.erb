@@ -18,6 +18,20 @@
   </head>
 
   <body>
+  <header class="navbar">
+  <%= link_to "Top page", root_path,class: "nav-link" %>
+  <%= link_to "My rice", perfumes_path,class: "nav-link" %>
+  <%= link_to "Niigata rice variety", perfumes_hinsyuitirann_path,class: "nav-link" %>
+  <%= link_to "Knowledge", perfumes_takikata_path ,class: "nav-link"%>
+  <%= link_to "Recipe share", tweets_path,class: "nav-link" %>
+  </header>
+
+  
     <%= yield %>
+  
+  <footer>	
+  <small>© 2025 sanuki wakana</small>
+  </footer>
+  
   </body>
 </html>

@@ -8,10 +8,28 @@ header{
   flex-shrink: 0;
   background: rgba(219, 198, 168, 0.59);
 }
+.navbar {
+  align-items: center;        /* 縦方向で中央に配置 */
+  justify-content: flex-end;  /* 右寄せ */
+  padding: 0 30px; 
+  display: flex;
+  gap: 20px;
+}
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 400;
+  font-size: 15px;
+}
+.nav-link:hover {
+  color: #3f3f07;
+}
 
-#first-block {
-  background-image: url("../images/first-back.jpg");
+
+.first-block {
+  background-image: image-url("first-back.jpg");
   background-size: cover;
+  background-position: center;
   width: 100%;
   height: 550px;
 
@@ -23,17 +41,34 @@ header{
   background-color: #fffefe;
 }
   
-
-
-.second-block {
-  height: 500px;
-  background-color: #f0f0f0;
+.category-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 横2列 */
+  gap: 60px 40px; /* 上下60px、左右40pxの間隔 */
+  justify-items: center; /* 中央揃え */
+  align-items: center;
+  max-width: 900px; /* ページ中央に制限 */
+  margin: 80px auto; /* 上下80px、中央寄せ */
+  text-align: center;
 }
 
-.third-block {
-  height: 500px;
-  background-color: #2f460b;
+.category-item h3 {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333;
 }
+
+.category-item p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+  margin-top: 5px;
+}
+
+
+
+
 
 footer{
   display: flex;
