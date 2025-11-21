@@ -1,0 +1,130 @@
+/* コンテナ全体 */
+.questions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px; /* 質問同士の縦の間隔 */
+  max-width: 800px;
+  margin: 100px auto;  /* 上下100px、左右中央寄せ */
+}
+
+/* 質問カード */
+.question-card {
+  padding: 20px;
+  
+  
+}
+
+/* 質問タイトル */
+.question-title {
+  display: block;            /* ブロック化して幅を自由に設定 */
+  padding: 10px ;        
+  font-weight: bold;
+  margin-bottom: 15px;
+  background-color:#f5efe3;
+
+  color: #333;
+  font-family: "Kiwi Maru";
+  font-size: 18px;
+  font-style: normal;/* 斜体ではなく普通の文字 */
+  font-weight: 400;        /* 標準の太さ */
+  letter-spacing: 1.2px;
+}
+
+/* ボタンの横並び */
+.rice-options {
+  display: flex;
+  justify-content: center;       /* 左右端には寄せず中央寄せ */
+  gap: 150px;                     /* ボタン同士の間隔（pxで調整可能） */
+  margin-top: 50px;  /* 上に20pxの余白を追加 */
+}
+
+/* ボタンとラベルをまとめたアイテム */
+.rice-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 小さいラベル文字 */
+.rice-label {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+/* ラジオボタンは非表示 */
+input[type="radio"] {
+  display: none;
+}
+
+/* ラベル（SVGボタン）の初期状態 */
+.rice-btn svg {
+  width: 40px;    /* 小さめに調整 */
+  height: 60px;
+  transition: all 0.3s;  /* アニメーション用 */
+  cursor: pointer;
+}
+
+/* ホバー時に少し大きく */
+.rice-btn svg:hover {
+  transform: scale(1.1); /* 1.1倍に拡大 */
+}
+
+/* 選択時にブラウンっぽく変更 */
+input[type="radio"]:checked + .rice-btn svg path {
+  fill: #c2b462ef; /* ブラウン */
+  fill-opacity: 0.8; /* 透明度少し下げる */
+}
+
+
+.sindanbotan {
+  display: flex;               /* フレックスコンテナにする */
+  justify-content: center;     /* 横方向中央 */
+  margin: 40px 0;           /* 上下40pxの余白、左右は0 */
+}
+
+
+.result-btn {
+  width: 90px;               /* ボタンの横幅 */
+  height: 90px;              /* ボタンの高さ */
+  flex-shrink: 0;             /* コンテナ内で縮まない */
+  border-radius: 50%;         /* 完全な丸形 */
+  
+  /* 背景画像設定 */
+  background: url('999.jpg') lightgray center / cover no-repeat;
+
+  /* 文字装飾 */
+  color: #333;               /* 文字色 */
+  font-size: 1.2rem;          /* 文字サイズ */
+  text-align: center;         /* 中央揃え */
+  line-height: 90px;         /* 高さと同じにして文字を縦中央に */
+  font-family: "Kiwi Maru";
+
+  cursor: pointer;            /* ホバー時にポインター表示 */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;               /* デフォルトボーダーを消す */
+}
+
+/* ホバー時に少し大きくして影をつける */
+.result-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.page-footer {
+  /* 下端をフッター上端に合わせる */
+  bottom: 60px;                     /* フッター高さが60pxの場合 */
+  width: 100%;
+  height: 150px;                     /* 画像の高さに合わせる */
+
+  background-image: url('footer.png'); /* 画像指定 */
+  background-size: cover;              /* コンテナに合わせて拡大 */
+  background-repeat: no-repeat;        /* 繰り返さない */
+  background-position: center top;     
+
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+
+

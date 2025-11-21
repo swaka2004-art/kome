@@ -1,1 +1,126 @@
-hinnsyu
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>top page</title>
+  　<%= stylesheet_link_tag "hinsyuitirann", media: "all" %>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500;700&display=swap" rel="stylesheet">
+
+  </head>
+
+  <nav class="breadcrumb">
+  <%= link_to "Home", root_path %> ▶ 
+  <%= link_to "Niigata rice variety", perfumes_hinsyuitirann_path %>
+  </nav>
+
+  <div class="variety-page">
+
+  <h1>Niigata rice variety</h1>
+  <h2>新潟米　品種一覧</h2>
+
+
+
+  <div class="rice-grid">
+  <div class="rice-card">
+    <div class="rice-card-bg"></div>
+    <%= image_tag "kosihikari.png", alt: "コシヒカリ" %>
+    <p class="rice-name">コシヒカリ</p>
+    <div class="rice-description">
+      <p>新潟米の代表格</p>
+      <p>うま味と粘りが魅力</p>
+      <p>一噛みでうま味はじける</p>
+    </div>
+  </div>
+
+  <div class="rice-card">
+    <div class="rice-card-bg"></div>
+    <%= image_tag "sinnosuke.png", alt: "新之助" %>
+    <p class="rice-name">新之助</p>
+    <div class="rice-description">
+      <p>革新の品と質、新プレミアム米</p>
+      <p>弾力のある食感を持ち、噛めば噛むほど甘みが出てくる</p>
+      <p>冷めてもおいしさと甘みが持続</p>
+    </div>
+  </div>
+
+  <div class="rice-card">
+    <div class="rice-card-bg"></div>
+    <%= image_tag "kosiibuki.png", alt: "こしいぶき" %>
+    <p class="rice-name">こしいぶき</p>
+    <div class="rice-description">
+      <p>「コシヒカリ」に次ぐ主力品種</p>
+      <p>柔らか、さっぱり</p>
+      <p>料理を引き立てるお米！</p>
+    </div>
+  </div>
+
+  <div class="rice-card">
+    <div class="rice-card-bg"></div>
+    <%= image_tag "hazukiminori.png", alt: "葉月みのり" %>
+    <p class="rice-name">葉月みのり</p>
+    <div class="rice-description">
+      <p>やわらか食感のお米</p>
+      <p>ほんのり甘く、お弁当にも最適</p>
+      <p>冷めても美味しく、料理に合う品種</p>
+    </div>
+  </div>
+
+  <div class="rice-card">
+    <div class="rice-card-bg"></div>
+    <%= image_tag "yukinkomai.png", alt: "ゆきん子舞" %>
+    <p class="rice-name">ゆきん子舞</p>
+    <div class="rice-description">
+      <p>粘りすぎずあっさりとした食味の早生品種</p>
+      <p>適度な歯ごたえと、ほのかな甘み</p>
+      <p>丼ものやカレーとも相性が良好</p>
+    </div>
+  </div>
+
+  <div class="rice-card">
+    <div class="rice-card-bg"></div>
+    <%= image_tag "tukiakari.png", alt: "つきあかり" %>
+    <p class="rice-name">つきあかり</p>
+    <div class="rice-description">
+      <p>ツヤがあり、うま味にも優れる良食味品種</p>
+      <p>大粒でどんな料理にも合う、オールマイティ米</p>
+    </div>
+  </div>
+
+  <div class="rice-card">
+    <div class="rice-card-bg"></div>
+    <%= image_tag "akidawara.png", alt: "あきだわら" %>
+    <p class="rice-name">あきだわら</p>
+    <div class="rice-description">
+      <p>さっぱりと控えめなおいしさ！</p>
+      <p>あっさりとした食感</p>
+      <p>バランスが良く、どんなおかずにも合わせやすい</p>
+    </div>
+  </div>
+
+  <div class="rice-card">
+    <div class="rice-card-bg"></div>
+    <%= image_tag "mizuho.png", alt: "みずほの輝き" %>
+    <p class="rice-name">みずほの輝き</p>
+    <div class="rice-description">
+      <p>食味が優れた晩生品種</p>
+      <p>冷めてももっちり、あっさりとしたおいしさ</p>
+      <p>朝ごはん、夏ごはん （冷や汁など）にぴったり</p>
+    </div>
+  </div>
+
+  <div class="rice-card">
+    <div class="rice-card-bg"></div>
+    <%= image_tag "miruki-.png", alt: "ミルキークイーン" %>
+    <p class="rice-name">ミルキークイーン</p>
+    <div class="rice-description">
+      <p>もちもち低アミロース米</p>
+      <p>噛むほど甘みが広がる米</p>
+      <p>冷めても硬くなりにくい</p>
+    </div>
+  </div>
+</div>
+
+<%= link_to "Home", root_path, class: "home-link" %>
+
+
+</div>

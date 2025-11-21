@@ -1,15 +1,38 @@
-<h1>お米アレンジ</h1>
-<h3>一覧ページ</h3>
-<%= link_to "新規投稿へ", tweets_new_path %>
-<div class="tweets-container">
-  <% @tweets.each do |t| %>
-    <div class="tweet">
-    <% if t.image.attached? %>
-            <%= image_tag t.image, size: '250x200'%>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>投稿一覧ページ</title>
+    <%= stylesheet_link_tag "index_post", media: "all" %>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500;700&display=swap" rel="stylesheet">
+
+  </head>
+
+<nav class="breadcrumb">
+<%= link_to "Home", root_path %> ▶ 
+<%= link_to "Recipe share", tweets_path %>
+</nav>
+
+<div class="recipe-share-page">
+  <h1>Recipe share</h1>
+  <h3>レシピ共有</h3>
+
+  <%= link_to "新規投稿へ ▶", new_tweet_path, class: "new-post-link" %>
+
+  <div class="tweets-container">
+    <% @tweets.each do |t| %>
+      <div class="tweet-card">
+        <div class="tweet-image-box">
+          <% if t.image.attached? %>
+            <%= image_tag t.image, class: "tweet-image" %>
+          <% end %>
+        </div>
+
+        <div class="tweet-text-box">
+          <h4><%= t.cooking.presence || "タイトルなし" %></h4>
+          <p><%= simple_format(t.recipe) %></p>
+          <p class="tweet-date"><%= t.created_at.strftime('%Y/%m/%d') %></p>
+        </div>
+      </div>
     <% end %>
-      <%= t.cooking %>
-      <%= t.recipe %>
-      <%= t.created_at %>
-    </div>
-  <% end %>
+  </div>
 </div>

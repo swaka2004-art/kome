@@ -1,0 +1,131 @@
+/* ===== あなたのライス（タイトル）位置 ===== */
+.intro {
+  position: absolute;
+  top: 120px;        /* 上からの位置調整 */
+  left: 22%;         /* 左寄せをもう少し詰める */
+  text-align: left;
+}
+
+.intro h2 {
+  font-family: "Kiwi Maru", serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: #333;
+  line-height: 2.4;
+  letter-spacing: 18px;
+  margin: 0;
+}
+
+.intro h2::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 4px;
+  background-color: #333;
+  margin-top: 20px;
+}
+
+
+/* ===== 全体を横並びにするコンテナ ===== */
+.result-container {
+  display: flex;
+  align-items: flex-end; 
+  justify-content: center;
+  gap: 100px;              
+  padding: 80px 40px 100px;
+  position: relative;
+}
+
+
+.top-content {
+  display: flex;
+  margin-left: 450px; /* 右へ移動したい分だけ調整 */
+  flex-direction: column;
+  align-items: center; /* 写真と説明を中央に整列 */
+  gap: 30px;
+  margin-bottom: 60px;
+  margin-top: 0px;
+}
+
+/* ===== 写真エリア ===== */
+.rice-box {
+  width: 260px;
+  height: 340px;
+  background-color: #f5efe3;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rice-box img {
+  width: 210px;
+  height: auto;
+  border-radius: 10px;
+  opacity: 0;                 /* 初期は透明 */
+  animation: fadeIn 2s forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+
+/* ===== 説明文（左寄せ） ===== */
+.rice-description {
+  max-width: 700px;          /* 横幅を指定（中央寄せが効きやすくなる） */
+  margin: 0 auto;            /* ← ページ中央に配置する */
+  font-size: 14px;
+  font-family: "Kiwi Maru";
+  color: #333;
+  line-height: 2.0;
+  text-align: left; /* 左寄せ */
+}
+
+.rice-description p {
+  margin: 0;
+  line-height: 2.0;
+  text-align: left;
+}
+
+.info-title {
+  display: flex;           /* アイコンと文字を横並び */
+  align-items: center;     /* 縦方向を中央揃え */
+  gap: 10px;               /* アイコンと文字の間隔 */
+}
+
+.info-item p {
+  margin-left: 30px;       /* 下の説明文を少し右に寄せて揃える */
+  line-height: 2.0;        /* 読みやすい行間 */
+}
+
+.info-item {
+  margin-top: 15px;        /* 各info-itemの間の余白 */
+}
+
+.rice-link {
+  color: #688f94; 
+  display: inline-block; /* transformを効かせるために必要 */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.rice-link:hover {
+  text-decoration: underline;
+  transform: scale(1.05); /* 1.05倍に拡大 */
+}
+
+.home-link {
+  position: fixed;       /* スクロールしても左下に固定 */
+  bottom: 60px;          /* 下からの距離 */
+  right: 20px;            /* 左からの距離 */
+  font-size: 14px;
+  color: #666;
+  text-decoration: underline;  /* 常に下線を表示 */
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.home-link:hover {
+  color: #333;           /* ホバー時に少し濃く */
+  transform: translateY(-2px); /* ふわっと上に動く演出（任意） */
+}
+

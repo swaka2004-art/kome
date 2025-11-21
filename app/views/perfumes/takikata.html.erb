@@ -1,1 +1,72 @@
-takikata
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>top page</title>
+  　<%= stylesheet_link_tag "takikata", media: "all" %>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500;700&display=swap" rel="stylesheet">
+
+  </head>
+
+  <nav class="breadcrumb">
+  <%= link_to "Home", root_path %> ▶ 
+  <%= link_to "Knowledge", perfumes_takikata_path %>
+  </nav>
+
+<div class="howto-section">
+
+ <h1>Knowledge</h1>
+ <h2>豆知識</h2>
+
+
+  <div class="howto-container">
+
+    <div class="howto-card">
+      <div class="howto-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="45" viewBox="0 0 63 97" fill="none">
+          <path d="M62.9997 48.4999C62.9997 75.2858 48.8967 96.9999 31.4998 96.9999C14.1028 96.9999 0 75.2858 0 48.5C31.4998 28.5 14.103 0 31.5 0C48.897 0 62.9997 21.7141 62.9997 48.4999Z"
+            fill="rgba(224, 207, 100, 0.59)" />
+        </svg>
+        <h2>炊き方のコツ</h2>
+      </div>
+
+      <div class="howto-point">
+        <h3>ポイント①　「研ぐ」ではなく「洗う」</h3>
+        <p>お米は力を入れて研ぐのではなく、優しく洗うように扱いましょう。表面のヌカを落とすのが目的なので、手早く丁寧に行うのがコツです。</p>
+      </div>
+
+      <div class="howto-point">
+        <h3>ポイント②　季節に合わせて浸水時間を調整</h3>
+        <p>炊く前にお米の芯までしっかり水を吸わせましょう。目安は、夏場で30分ほど、冬場で1時間30分ほどです。</p>
+      </div>
+
+      <div class="howto-point">
+        <h3>ポイント③　「蒸らし」で仕上げる</h3>
+        <p>炊きあがり後の蒸らし時間でふっくら食感が決まります。炊飯器に蒸らし機能がない場合は、10〜15分ふたを開けずに放置しましょう。</p>
+      </div>
+    </div>
+
+    <div class="howto-card">
+      <div class="howto-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="45" viewBox="0 0 63 97" fill="none">
+          <path d="M62.9997 48.4999C62.9997 75.2858 48.8967 96.9999 31.4998 96.9999C14.1028 96.9999 0 75.2858 0 48.5C31.4998 28.5 14.103 0 31.5 0C48.897 0 62.9997 21.7141 62.9997 48.4999Z"
+            fill="rgba(224, 207, 100, 0.59)" />
+        </svg>
+        <h2>保存のコツ</h2>
+      </div>
+
+      <div class="howto-point">
+        <h3>涼しくて暗い場所を選ぶ</h3>
+        <p>お米は15℃以下の涼しい場所での保存がおすすめです。直射日光や湿気の多い場所は避けましょう。</p>
+      </div>
+
+      <div class="howto-point">
+        <h3>冷蔵庫の野菜室もおすすめ</h3>
+        <p>夏など気温が高い時期は、密閉容器に入れて冷蔵庫の野菜室で保存すると、鮮度を保ちやすくなります。</p>
+      </div>
+    </div>
+
+  </div>
+
+<%= link_to "Home", root_path, class: "home-link" %>
+</div>

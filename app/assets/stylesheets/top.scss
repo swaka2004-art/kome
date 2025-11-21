@@ -6,7 +6,7 @@
 header{
   height: 50px;
   flex-shrink: 0;
-  background: rgba(219, 198, 168, 0.59);
+  background: #f5efe3; 
 }
 .navbar {
   align-items: center;        /* 縦方向で中央に配置 */
@@ -17,14 +17,30 @@ header{
 }
 .nav-link {
   text-decoration: none;
+  font-size: 18px;
+  font-family: 'Quicksand', sans-serif; /* やさしい雰囲気に */
+  transition: color 0.3s ease;
   color: #333;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 15px;
+  gap: 40px; 
 }
 .nav-link:hover {
+  transform: scale(1.05); 
   color: #3f3f07;
+  text-decoration: underline; /* ホバー時に下線を表示してクリック感を出す */
 }
 
+.navbar.home {
+  position: absolute;
+  top: 20px; /* 写真上で少し下にずらす */
+  left: 0;
+  width: 100%;
+  background: none; /* 背景消す！ */
+  box-shadow: none;
+  justify-content: center;
+  z-index: 10;
+}
 
 .first-block {
   background-image: image-url("first-back.jpg");
@@ -37,14 +53,78 @@ header{
   justify-content: center;
   align-items: center;
 
-  height: 500px;
-  background-color: #fffefe;
+  position: relative;
+
+  filter: brightness(3.0) saturate(0.9);
+
+  /* ゆっくりズームインのアニメーション */
+  animation: slowZoom 30s ease-in-out infinite alternate;
 }
+
+/* ゆっくりズームインして戻る動き */
+@keyframes slowZoom {
+  0% {
+    transform: scale(1);
+    filter: brightness(0.98) sepia(0.1) saturate(1.05);
+  }
+  100% {
+    transform: scale(1.05);
+    filter: brightness(1) sepia(0.08) saturate(1.1);
+  }
+}
+
+
+.title-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #333;
+  z-index: 2; /* 背景より上に */
+  
+}
+
+.site-title {
+  font-family: 'Kiwi+Maru', serif;
+  font-size: 58px;
+  font-weight: 450;
+  color:#333;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+  animation: fadeInTitle 2s ease forwards;
+  opacity: 0;
+  
+  text-shadow: 0 2px 4px rgba(180, 160, 130, 0.2); 
+}
+
+.site-subtitle {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: rgba(80, 80, 80, 0.8);
+  opacity: 0;
+  animation: fadeInSubtitle 3s ease forwards;
+  animation-delay: 1.5s;
+}
+
+/* タイトルふわっと */
+@keyframes fadeInTitle {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 英語サブタイトルあとからふわっと */
+@keyframes fadeInSubtitle {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
   
 .category-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 横2列 */
-  gap: 60px 40px; /* 上下60px、左右40pxの間隔 */
+  gap: 120px 40px; /* 上下120px、左右40pxの間隔 */
   justify-items: center; /* 中央揃え */
   align-items: center;
   max-width: 900px; /* ページ中央に制限 */
@@ -52,8 +132,29 @@ header{
   text-align: center;
 }
 
+.category-item {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+/* --- ふわっと登場準備（スクロール前） --- */
+.category-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+/* --- スクロールして見えた時の状態 --- */
+.category-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 .category-item h3 {
   font-size: 1.2rem;
+  font-family: 'Sacramento';
   margin-top: 15px;
   font-weight: bold;
   color: #333;
@@ -61,24 +162,35 @@ header{
 
 .category-item p {
   font-size: 0.9rem;
+  font-family: 'Quicksand';
   color: #666;
   line-height: 1.5;
   margin-top: 5px;
 }
 
+/* 丸い画像の設定 */
+.category-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%; /* 丸くする */
+  object-fit: cover;  /* はみ出さないようにトリミング */
+  transition: transform 0.3s ease;
+}
 
-
+.category-image:hover {
+  transform: scale(1.05); /* ホバーで少し拡大 */
+}
 
 
 footer{
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #000;
+  color: #333;
   font-size: 20px;
   font-style: normal;
 
   height: 50px;
   flex-shrink: 0;
-  background: rgba(219, 198, 168, 0.59);
+  background: #f5efe3; 
 } 

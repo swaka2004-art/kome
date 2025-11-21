@@ -1,0 +1,130 @@
+
+/* --- パンくずリスト --- */
+.breadcrumb {
+  position: absolute;
+  top: 60px;
+  left: 30px; /* 左上配置 */
+  font-size: 14px;
+  color: #666;
+}
+.breadcrumb a {
+  text-decoration: none; /* 下線を消す */
+  color: #666;           /* 文字色を指定（ここでは濃いグレー） */
+}
+
+/* ページ全体 */
+.variety-page {
+
+/* --- タイトル文字装飾 --- */
+h1 {
+  font-size: 28px;
+  margin: 40px 0px 10px 90px;
+  font-weight: 600;
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 14px;      /* 小さめの補助見出し */
+    color: #333;          /* 少し薄いグレー文字 */
+    margin: 0 0 80px 90px; /* タイトルとのバランスを取る余白 */
+    font-weight: normal;
+    letter-spacing: 2px; 
+    font-family: "Kiwi Maru";
+}
+
+
+/* --- 品種カードのグリッド --- */
+.rice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 横3つ */
+  gap: 60px; /* カード間の余白 */
+  justify-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* --- 各カード --- */
+.rice-card {
+  position: relative;
+  width: 200px;
+  text-align: center;
+  margin-bottom: 40px; /* 下方向の余白 */
+}
+
+/* --- ベージュ背景ボックス（画像の後ろだけ）--- */
+.rice-card-bg {
+  position: absolute;
+  top: 39%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  width: 170px;   /* 画像より少し大きめ */
+  height: 220px;  /* 画像より少し大きめ */
+  background-color: #f5efe3; /* ヘッダーと同じベージュ */
+  z-index: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* --- 写真部分 --- */
+.rice-card img {
+  width: 150px;
+  height: 200px;
+  border-radius: 10px;
+  margin: 35px auto 0; 
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rice-card:hover img {
+  transform: translateY(-20px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* --- 品種名 --- */
+.rice-name {
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Kiwi Maru";
+  color: #333;
+  position: relative;
+  z-index: 2;
+}
+
+/* --- 説明文 --- */
+.rice-description {
+  margin-top: 8px;      
+      
+  font-family: "Kiwi Maru"; 
+  color: #555;           
+  text-align: center !important; /* 中央寄せ */
+  position: relative;
+  z-index: 2;
+}
+.rice-description p {
+  margin: 0;           /* 各段落の余白をなくす */
+  line-height: 1.2;    /* 行間を詰める */
+  text-align: center;  /* 念のため各pも中央寄せ */
+  font-size: 12px;  
+}
+
+.home-link {
+  position: fixed;       /* スクロールしても左下に固定 */
+  bottom: 60px;          /* 下からの距離 */
+  right: 20px;            /* 左からの距離 */
+  font-size: 14px;
+  color: #666;
+  text-decoration: underline;  /* 常に下線を表示 */
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.home-link:hover {
+  color: #333;           /* ホバー時に少し濃く */
+  transform: translateY(-2px); /* ふわっと上に動く演出（任意） */
+}
+
+
+}

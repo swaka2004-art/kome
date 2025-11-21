@@ -1,0 +1,109 @@
+/* --- パンくずリスト --- */
+.breadcrumb {
+  position: absolute;
+  top: 60px;
+  left: 30px;
+  font-size: 14px;
+  color: #666;
+}
+.breadcrumb a {
+  text-decoration: none; /* 下線を消す */
+  color: #666;           /* 文字色を指定（ここでは濃いグレー） */
+}
+/* ---------------------- */
+/* 投稿一覧ページの全体枠 */
+/* ---------------------- */
+.recipe-share-page {
+  h1 {
+    color: #333;
+    font-family: "Quicksand", sans-serif;
+    font-size: 28px;
+    margin: 60px 0px 10px 90px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+
+  h3 {
+    font-size: 14px;
+    color: #333;
+    margin: 0 0 80px 90px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    font-family: "Kiwi Maru";
+  }
+
+  /* 新規投稿リンク */
+  .new-post-link {
+    display: inline-block;
+    font-size: 14px;
+    color: #666;
+    text-decoration: underline;
+    margin: 0px 60px 40px 1000px;
+    text-align: right;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  /* 一覧コンテナ */
+  .tweets-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    margin: 40px 0 100px 0;
+  }
+
+  /* 各投稿カード */
+  .tweet-card {
+    display: flex;
+    align-items: flex-start;
+    background-color:  #f5efe3;
+    border-radius: 14px;
+    padding: 25px;
+    width: 85%;
+    max-width: 950px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* 写真ボックス */
+  .tweet-image-box {
+    flex: 0 0 340px; /* ← 写真をやや大きく */
+    height: 260px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #e6e0d5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .tweet-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* レシピ説明部分 */
+  .tweet-text-box {
+    flex: 1;
+    margin-left: 40px;
+    color: #333;
+    line-height: 1.8;
+    font-family: "Kiwi Maru";
+  }
+
+  .tweet-text-box h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ccc; /* 下にうすい線を追加 */
+    font-size: 1.1rem;
+  }
+
+  .tweet-date {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 10px;
+  }
+}

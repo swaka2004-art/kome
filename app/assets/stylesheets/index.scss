@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+} 
+
+/* --- パンくずリスト --- */
+.breadcrumb {
+  position: absolute;
+  top: 60px;
+  left: 30px; /* 左上配置 */
+  font-size: 14px;
+}
+.breadcrumb a {
+  text-decoration: none; /* 下線を消す */
+  color: #666;           /* 文字色を指定（ここでは濃いグレー） */
+}
+
+.myrice-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.myrice-text {
+  width: 50%; /* 全体の幅を少し広く */
+  align-items: center;
+  display: flex;
+  flex-direction: column;/* 縦に積む */
+  gap: 65px; /* 箱同士の縦間隔 */
+}
+
+
+/* タイトル部分 */
+.title-box {
+  text-align: center; /* 中央揃え */
+  width: 100%; /* 横幅いっぱい */
+  letter-spacing: 5px; /* 文字と文字の間を2px広げる */
+  color: #333;
+  font-family: "Quicksand", sans-serif;
+}
+.title-box h1 {
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  
+}
+
+.title-box h2 {
+  font-size: 18px;
+  font-weight: 350;
+}
+
+/* 説明文部分 */
+.description-box {
+  color: #333;
+  text-align: center;
+  font-family: "Kiwi Maru";
+  font-style: normal;
+  font-weight: 400;
+  padding: 20px;
+  border-radius: 12px;
+  line-height: 1.8;
+  font-size: 13px;
+
+}
+
+.myrice-image {
+  width: 55%;
+  border-radius: 0 0 0 80px;
+  overflow: hidden;
+}
+
+
+/* 診断ボタン */
+.start-btn {
+  display: inline-block;
+  background: rgba(180, 201, 217, 0.50);
+  color: #333;
+  padding: 10px 30px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-family: "Zen Maru Gothic", sans-serif; 
+  font-size: 10px;   /* 文字の大きさ */
+  font-weight: 400;  /* 太さ：400=普通、700=太字 */
+  letter-spacing: 1px; 
+}
+
+.start-btn:hover {
+  background-color: #688f94;
+  transform: scale(1.03);
+}

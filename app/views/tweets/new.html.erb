@@ -1,21 +1,38 @@
-<h1>お米アレンジ</h1>
-<h3>新規投稿</h3>
-<%= form_for @tweet do |f| %>
-  <div class="field">
-    <%= f.label :cooking %>
-    <%= f.text_field :cooking, :size => 30 %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :recipe %>
-    <%= f.text_field :recipe, :size => "100x5" %>
-  </div>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>新規投稿ページ</title>
+    <%= stylesheet_link_tag "new_post", media: "all" %>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <div class="field">
-    <%= f.label :image %>
-    <%= f.file_field :image %>
-  </div>
+  </head>
 
-  <%= f.submit "投稿する" %>
-<% end %>
-<%= link_to "投稿一覧に戻る", tweets_path %>
+<nav class="breadcrumb">
+<%= link_to "Home", root_path %> ▶ 
+<%= link_to "Recipe share", tweets_path %> ▶ New post</nav>
+
+<div class="new-post-page">
+  <h1>New post</h1>
+  <h3>新規投稿</h3>
+
+  <%= form_for @tweet do |f| %>
+    <div class="field">
+      <%= f.label :メニュー名 %>
+      <%= f.text_field :cooking, size: 30 %>
+    </div>
+
+    <div class="field">
+      <%= f.label :レシピ %>
+      <%= f.text_area :recipe, rows: 10, cols: 80 %>
+    </div>
+
+    <div class="field">
+      <%= f.label :写真 %>
+      <%= f.file_field :image %>
+    </div>
+
+    <%= f.submit "投稿する" %>
+  <% end %>
+
+  <%= link_to "投稿一覧に戻る ▶", tweets_path %>
+</div>

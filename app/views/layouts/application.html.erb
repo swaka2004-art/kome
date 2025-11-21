@@ -6,6 +6,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Zen+Maru+Gothic:wght@400;500;700$family=Sacramento&display=swap" rel="stylesheet">
+
 
     <%= yield :head %>
 
@@ -18,8 +21,8 @@
   </head>
 
   <body>
-  <header class="navbar">
-  <%= link_to "Top page", root_path,class: "nav-link" %>
+  <header class="navbar <%= 'home' if current_page?(controller: 'perfumes', action: 'top') %>">
+  <%= link_to "Home", root_path,class: "nav-link" %>
   <%= link_to "My rice", perfumes_path,class: "nav-link" %>
   <%= link_to "Niigata rice variety", perfumes_hinsyuitirann_path,class: "nav-link" %>
   <%= link_to "Knowledge", perfumes_takikata_path ,class: "nav-link"%>
